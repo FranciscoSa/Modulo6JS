@@ -8,7 +8,7 @@ const server = express();
 
 server.get('/cursos', (req, res) => {
     const nome = req.query.nome;
-    return res.json({nome: nome})
+    return res.json({nome: `Aprendendo ${nome}`})
 });
 
 server.listen(2000);
