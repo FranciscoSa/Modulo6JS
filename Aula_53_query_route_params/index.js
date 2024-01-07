@@ -11,7 +11,7 @@ server.get('/cursos/:id', (req, res) => {
     const id = req.params.id; //Route params
 
     return res.json({
-                        nome: `Aprendendo ${nome}`,
+                        nome: `Aprendendo ${ nome }`,
                         id: id
                     })
 });
