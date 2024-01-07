@@ -2,8 +2,8 @@ const express = require('express');
 
 const server = express();
 
-server.get('/cursos', () => {
-    console.log("acessou a rota");
+server.get('/cursos', (req, res) => {
+    return res.json({ curso: "Node JS"})
 });
 
 server.listen(2000)
