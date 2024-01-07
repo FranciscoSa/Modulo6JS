@@ -7,7 +7,8 @@ const server = express();
 //Request body = { node: 'Nodejs', tipo: 'Backend'}
 
 server.get('/cursos', (req, res) => {
-    return res.json({nome: "casa"})
+    const nome = req.query.nome;
+    return res.json({nome: nome})
 });
 
 server.listen(2000);
