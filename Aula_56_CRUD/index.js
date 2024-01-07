@@ -31,8 +31,13 @@ server.put('/cursos/:id', (req, res)=> {
     cursos[id] = name
 
     return res.json(cursos)
-
 });
 
+//Delete - Excluindo curso 
+server.delete('/cursos/del/:id', (req, res)=> {
+    const { id } = req.params;
+    cursos.splice(id, 1)
+    return res.json({message: "Curso deletado com sucesso"})
+});
 
 server.listen(2000)
