@@ -2,6 +2,11 @@ const express = require("express");
 
 const server = express();
 
+//middleware Global
+server.use((req, res, next)=>{
+    console.log('Eu estive aqui !!')
+});
+
 server.get("/cursos", (req, res) => {
     return res.json({casa: "bola"});
 });
