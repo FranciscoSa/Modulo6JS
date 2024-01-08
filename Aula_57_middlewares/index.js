@@ -4,7 +4,8 @@ const server = express();
 
 //middleware Global
 server.use((req, res, next)=>{
-    console.log('Eu estive aqui !!')
+    console.log(`URL Chamada: ${req.url }`)
+    return next();
 });
 
 server.get("/cursos", (req, res) => {
